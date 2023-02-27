@@ -1,4 +1,4 @@
-namespace ApiRestFull
+namespace WebApplication1
 {
     public class WeatherForecast
     {
