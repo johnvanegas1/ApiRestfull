@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,8 +13,10 @@ namespace Entities
         [Key]
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
-        public int TipoMovimiento { get; set; }
+        public TipoMovimiento TipoMovimiento { get; set; }
         public int Valor { get; set; }
         public int Saldo { get; set; }
+        public int CuentaId { get; set; }
+        public Cuenta Cuenta { get; set; }
     }
 }

@@ -5,9 +5,9 @@ namespace RepositoriesEFCore.Repositories
 {
     public class CuentaRepository : ICuentaRepository
     {
-        readonly Context _context;
+        readonly BancoDbContext _context;
 
-        public CuentaRepository(Context context)
+        public CuentaRepository(BancoDbContext context)
         {
             _context = context;
         }
@@ -19,7 +19,7 @@ namespace RepositoriesEFCore.Repositories
 
         public IEnumerable<Cuenta> GetAll()
         {
-            return _context.Cuenta;
+            return _context.Cuentas;
         }
     }
 }

@@ -9,13 +9,11 @@ namespace Entities
 {
     public class Persona
     {
-        [Key]
-        public int id { get; set; }  
         public string Nombre { get; set; }
-        public int Edad { get; set; }
         public string Genero { get; set; }
+        public int Edad { get; set; }
         public int Identificacion { get; set; }
         public string Direccion { get; set; }
-        public int Telefono { get; set; }
+        public long? Telefono { get; set; }
     }
 }

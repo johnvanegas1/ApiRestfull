@@ -9,9 +9,9 @@ namespace RepositoriesEFCore.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        readonly Context _context;
+        readonly BancoDbContext _context;
 
-        public UnitOfWork(Context context)
+        public UnitOfWork(BancoDbContext context)
         {
             _context = context;
         }
@@ -22,7 +22,7 @@ namespace RepositoriesEFCore.Repositories
             {
                 return _context.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 throw;
             }

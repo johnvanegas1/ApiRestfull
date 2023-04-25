@@ -8,7 +8,9 @@ namespace Entities.Interfaces
 {
     public interface IClienteRepository
     {
-        void Add(Persona cliente);
-        IEnumerable<Persona> GetAll();
+        void Add(Cliente cliente);
+        void Update(Cliente cliente);
+        IEnumerable<Cliente> GetAll();
+        IEnumerable<Cliente> GetById(int Id);
     }
 }

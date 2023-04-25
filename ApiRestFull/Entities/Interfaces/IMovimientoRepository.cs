@@ -10,5 +10,6 @@ namespace Entities.Interfaces
     {
         void Add(Movimiento cliente);
         IEnumerable<Movimiento> GetAll();
+        IEnumerable<Movimiento> GetByDate(DateTime date, int ClientId);
     }
 }

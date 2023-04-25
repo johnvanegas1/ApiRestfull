@@ -9,8 +9,10 @@ namespace Entities
 {
     public class Cliente : Persona
     {
-        public int ClienteId { get; set; }
+        public int Id { get; set; }
         public string? Contraseña { get; set; }
         public bool Estado { get; set; }
+        public ICollection<Cuenta> Cuentas { get; set;}
+        
     }
 }

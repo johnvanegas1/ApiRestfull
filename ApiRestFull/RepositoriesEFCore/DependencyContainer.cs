@@ -15,11 +15,10 @@ namespace RepositoriesEFCore
     {
         public static IServiceCollection AddRepositories(this IServiceCollection services, IConfiguration configuration) {
 
-            services.AddDbContext<Context>(options => options.UseSqlServer(configuration.GetConnectionString("BancoTest")));
-            services.AddScoped<IClienteRepository, ClientetRepository>();
+            services.AddDbContext<BancoDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("BancoTest")));
+            services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<ICuentaRepository, CuentaRepository>();
             services.AddScoped<IMovimientoRepository, MovimientoRepository>();
-            services.AddScoped<IPersonaRepository, PersonaRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;
